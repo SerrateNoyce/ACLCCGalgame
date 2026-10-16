@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("ACLCC Galgame")
+define config.name = _("ACLCC Visual Novel")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -71,7 +71,7 @@ ADOFAI Cursed Levels (CN) Community
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "ACLCCGalgame"
+define build.name = "ACLCCVN"
 
 
 ## Build Config
@@ -186,7 +186,7 @@ default preferences.audio_when_unfocused = False
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "ACLCCGalgame-1778943679"
+define config.save_directory = "ACLCCVN"
 
 
 ## Icon ########################################################################

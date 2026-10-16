@@ -3,14 +3,14 @@
     "google_play_key": null,
     "google_play_salt": null,
     "heap_size": "3",
-    "icon_name": "ACLCC Galgame",
+    "icon_name": "ACLCCVN",
     "include_pil": false,
     "include_sqlite": false,
     "layout": null,
-    "name": "ACLCC Galgame",
+    "name": "ACLCCVN",
     "numeric_version": 1,
     "orientation": "sensorLandscape",
-    "package": "top.aclcc.aclccgalgame",
+    "package": "top.aclcc.aclccvn",
     "permissions": [
         "VIBRATE",
         "INTERNET"

@@ -98,7 +98,7 @@ label setup_naming_start:
     # 如果在显示时间内输入了内容：
     if entered == "Entered":
         setup "哇，{w=0.25}你的速度可真快，只用了[delta_time:.3f]秒{......}\n你大概只是乱敲了下键盘吧，{w=0.25}我猜。"
-        setup "也许你是个速通玩家，{w=0.5}谁知道呢？\n{w=1.0}我反正不明白为什么一个galgame也会有人尝试速通。"
+        setup "也许你是个速通玩家，{w=0.5}谁知道呢？\n{w=1.0}我反正不明白为什么一个视觉小说也会有人尝试速通。"
         jump setup_naming_entered
 
     setup "——啊，{w=0.25}不好意思，{w=0.5}我得提醒你一下。"
