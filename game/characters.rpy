@@ -89,7 +89,7 @@ default mc = CharacterWithData("undefined")
 default current_perspective = mc
 
 
-default setup = CharacterWithData("？？？")
+default setup = CharacterWithData("？？？", window_background="gui/textbox_setup.png")
 
 
 default ashell = CharacterWithData("阿希尔Ashell", image="ashell", what_prefix="a ", what_suffix="")
@@ -298,6 +298,6 @@ default comment = CharacterWithData("# ", what_color="#808080")
 default narrator = CharacterWithData(None)
 
 
-default system = narrator.center  # 别名？
+default system = narrator.center # 别名？
 
 define debug = CharacterWithData(None, kind=nvl, what_color="#00ff00",what_font=debug_gui_font)
