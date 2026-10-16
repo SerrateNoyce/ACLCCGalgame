@@ -58,7 +58,7 @@ label setup_naming_start:
         """
 
         menu:
-            "要使用上次的名字（[mc.nickname]）吗？"
+            "要使用上次的名字（[persistent.name_mc]）吗？"
             "当然。":
                 $ mc.nickname = persistent.name_mc
                 setup "非常感谢，{w=0.5}这样我就不用再重新念一遍那无聊的稿子了。"
