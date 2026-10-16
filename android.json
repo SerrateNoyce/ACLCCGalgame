@@ -3,14 +3,14 @@
     "google_play_key": null,
     "google_play_salt": null,
     "heap_size": "3",
-    "icon_name": "ACLCCVN",
+    "icon_name": "ACLCCGame",
     "include_pil": false,
     "include_sqlite": false,
     "layout": null,
-    "name": "ACLCCVN",
+    "name": "ACLCCGame",
     "numeric_version": 1,
     "orientation": "sensorLandscape",
-    "package": "top.aclcc.aclccvn",
+    "package": "top.aclcc.aclccg",
     "permissions": [
         "VIBRATE",
         "INTERNET"

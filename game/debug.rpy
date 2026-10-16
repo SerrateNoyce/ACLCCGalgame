@@ -67,7 +67,7 @@ screen debug_screen():
             if renpy.variant("pc"):
                 textbutton _("Copy test file to Desktop") action Function(CopyToAnyway, "test/XS-X but delay event.zip", get_desktop_path() + "\\level file.zip")
             elif renpy.variant("android"):
-                textbutton _("Copy test file to Download") action Function(release_file_quietly, "test/XS-X but delay event.zip", "Download/ACLCC Visual Novel", "level file.zip")
+                textbutton _("Copy test file to Download") action Function(release_file_quietly, "test/XS-X but delay event.zip", "Download/ACLCCGame", "level file.zip")
 
 
 screen debug_menu(title, scroll=None, yinitial=0.0):
