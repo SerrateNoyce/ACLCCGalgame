@@ -30,10 +30,8 @@ label ch1:
     "阳光照亮到了你的房间，\n{w=0.5}也照亮了你那沉睡的意识。"
     "你揉了揉眼睛，{w=0.5}环顾了一下四周以适应早晨的光线，\n{w=0.5}然后迫不及待地拿出手机，{w=0.25}打开了群聊。"
 
-    window hide
     $ session_title = None
     nvl clear
-    nvl show
 
     mc.nvl "各位早上好"
 
@@ -45,27 +43,15 @@ label ch1:
 
     system.nvl "[yangsy.nvl]回应了你的消息：☀{fast}{w=0.5}{nw}"
     yangsy.nvl "早啊（"
-    
-    nvl hide
-    window show
 
     "{......}"
-
-    window hide
-    nvl show
 
     mc.nvl "其他成员呢？"
     yangsy.nvl "大部分估计都还在补觉吧（"
     yangsy.nvl "毕竟基本都刚连着上了五天的学 {w=0.5}休息日休息是很正常的事（"
     mc.nvl "这样吗"
 
-    nvl hide
-    window show
-
     "早上的群聊确实很冷寂——{w=0.5}与记忆中昨晚的盛况简直是天差地别。"
-
-    window hide
-    nvl show
 
     mc.nvl "Yangsy为什么这么早就醒了呢？"
     yangsy.nvl "问得好\n{w=0.5}Yangsy自己也不知道（"
@@ -122,9 +108,6 @@ label ch1:
     mc.nvl "嗯 感谢提醒"
     yangsy.nvl "不用谢（"
     
-    nvl hide
-    window show
-
     mc "{......}还是先做点作业吧。"
 
     scene black with dissolve
@@ -133,10 +116,8 @@ label ch1:
     
     "刚刚写完英语作业的你突然意识到，{w=0.5}差不多也是时候去检查一下QQ消息了。"
 
-    window hide
     $ session_title = None
     nvl clear
-    nvl show
 
     $ config.nvl_list_length = 9
 
@@ -154,13 +135,11 @@ label ch1:
 
     call ch1_myworld_view
 
-    window hide
     scene home_noon with pixellate
     $ another_view = False
     $ current_perspective = mc
     $ session_title = None
     # nvl clear
-    nvl show
 
     gra.nvl "哦，是 [baile] 告诉你的？{fast}{nw}"
     gra.nvl "这样啊{...}{fast}{nw}"
@@ -181,7 +160,6 @@ label ch1_myworld_view:
     $ current_perspective = myworldzycpc
     $ session_title = baile
     nvl clear
-    nvl show
 
     myworldzycpc.nvl "听说你要做个谱子下载网站，{w=0.5}是这样吗"
     baile.nvl "嗯是的喵~"
@@ -193,11 +171,9 @@ label ch1_myworld_view:
     baile.nvl "不知道，{w=0.5}大概是不能随便进人吧喵~"
     myworldzycpc.nvl "好吧{......}"
 
-    nvl hide
     scene black with pixellate
     $ renpy.notify("某一天")
     nvl clear
-    nvl show
 
     myworldzycpc "（[baile]不在，总觉得有点无聊）"
     myworldzycpc "（要不我再去试试加那个群吧）\n{w=1.0}（上次没通过可能是因为我没写入群消息）"

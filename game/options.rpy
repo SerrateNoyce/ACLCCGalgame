@@ -134,6 +134,12 @@ define config.after_load_transition = fade
 define config.end_game_transition = fade
 
 
+## Between ADV mode and NVL mode.
+
+define config.adv_nvl_transition = dissolve
+define config.nvl_adv_transition = dissolve
+
+
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
 

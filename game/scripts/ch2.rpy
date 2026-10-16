@@ -13,8 +13,6 @@ label ch2:
         "（也许是时候了解一下群内的情况了......）{fast}"
         "询问群内成员":
             $ variables["overwatch_first"] = False
-            window hide
-            nvl show
 
             mc.nvl "话说，{w=0.25}我好像还不太认识你们呢，{w=0.5}也对这个群的历史不太了解"
             myworldzycpc.nvl "我也是{...}"
@@ -60,8 +58,6 @@ label ch2:
 
         "暗中观察":
             $ variables["overwatch_first"] = True
-            window hide
-            nvl show
 
             nona.nvl "[[level.zip]\n{w=1.0}我的新魔改做好了！\n{w=1.0}哪个好宝宝帮我测试一下呀"
             yangsy.nvl "Yangsy试试（"
