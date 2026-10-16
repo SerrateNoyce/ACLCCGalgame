@@ -106,10 +106,10 @@ screen say(who, what):
         id "window"
 
         if another_view:
-            add "gui/textbox_another_view.png" xalign 0.5 yalign 1.0
+            background "gui/textbox_another_view.png" xalign 0.5 yalign 1.0
             add "gui/another_view.png" xalign 0.5 yalign 1.0
         else:
-            add "gui/textbox.png" xalign 0.5 yalign 1.0
+            background "gui/textbox.png" xalign 0.5 yalign 1.0
 
         if renpy.variant("small"):
             yalign 1.0
