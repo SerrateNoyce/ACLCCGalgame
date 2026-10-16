@@ -10,11 +10,11 @@ label ch1:
     $ current_perspective = yangsy
 
     show yangsy at l11
-    pause 1.0
-    show yangsy at hf11
-    yangsy.comment brow_angry mouth_cat_sad_open "不是什么叫第二天一开始视角就换了？{w=0.5}这也太突兀了吧（"
-    show yangsy at d11
-    yangsy.comment brow_jitome mouth_cat_happy "Yangsy稍微试着改一下这段，抱歉了myworld（"
+    pause 0.5
+    show yangsy brow_angry mouth_cat_sad_open at hf11
+    yangsy.comment "不是什么叫第二天一开始视角就换了？{w=0.5}这也太突兀了吧（"
+    show yangsy brow_sad mouth_cat_happy_open at d11
+    yangsy.comment "Yangsy稍微试着改一下这段，抱歉了myworld（"
     show yangsy at rhide
     hide yangsy
 
@@ -91,7 +91,7 @@ label ch1:
             mc.nvl "我对魔改这种用一句话改变谱面的这种创作方式很感兴趣"
             mc.nvl "毕竟其他作者也不会把已经完成的关卡作为创作素材"
             yangsy.nvl "很少有一上来就对魔改这么感兴趣的人呢（"
-            if gra_chemistry_name is True:
+            if variables["gra_chemistry_name"] is True:
                 yangsy.nvl "看来Gra昨天的预感还挺准的？（（（"
             yangsy.nvl "等哪天有想法了你或许可以试试自己做一个？（"
         "说不太上来但就是喜欢":
@@ -138,6 +138,8 @@ label ch1:
     nvl clear
     nvl show
 
+    $ config.nvl_list_length = 9
+
     morin.nvl "一日之计在于晨\n我醒了{fast}{nw}"
     gra.nvl "早{fast}{nw}"
     yangsy.nvl "早（{fast}{nw}"
@@ -148,10 +150,12 @@ label ch1:
     gra.nvl "你说ACLC网站？\n你是怎么知道的？{fast}{nw}"
     myworldzycpc.nvl "我的朋友 [baile] 告诉我的，看到有个链接说可以加入群聊{fast}"
 
+    $ config.nvl_list_length = 6
+
     call ch1_myworld_view
 
     window hide
-    scene home_noon with pixelate
+    scene home_noon with pixellate
     $ another_view = False
     $ current_perspective = mc
     $ session_title = None
@@ -203,7 +207,7 @@ label ch1_myworld_view:
     
     system.nvl "加入群聊之前，需要先回答问题：\n{w=1.0}你是怎么知道这个群的？{nw}"
     myworldzycpc.nvl "从ACLC网站"
-    "{.....}"
+    "{......}"
 
     nvl clear
     $ session_title = None
