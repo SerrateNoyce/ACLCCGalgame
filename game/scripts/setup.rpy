@@ -215,11 +215,11 @@ label setup_naming_entered:
             nvl clear
             debug "Debug Mode Is Already Enabled{fast}{w=1.0}{nw}"
         # 如果setup没见过调试模式触发信息：
-        if not persistent.setup_saw_debug_screen:
+        if not persistent.variables["setup_saw_debug_screen"]:
             setup "？"
             setup "你刚刚{w=0.25}，是不是输入了什么东西{w=0.5}，然后弹出了一个奇怪的界面？"
             setup "我想{w=0.25}你可能是有什么特殊的身份吧。"
-            $ persistent.setup_saw_debug_screen = True
+            $ persistent.variables["setup_saw_debug_screen"] = True
         # 否则：
         else:
             mwam.comment "你们来填吧，我想不出这里写什么"
@@ -230,7 +230,7 @@ label setup_naming_entered:
     # 否则，如果输入的名字与剧情中存在的角色撞名：
     elif player_input in names:
         # 并且，如果还没修改角色：
-        if not persistent.duplicate_name_fixed:
+        if not persistent.variables["duplicate_name_fixed"]:
             # 并且，如果游戏目前不在调试模式：
             if not persistent.debug_mode:
                 # 显示错误提示
@@ -291,7 +291,7 @@ label setup_naming_entered:
                 nvl clear
                 debug "info: changestorage.sh begin{fast}{w=1.0}{nw}"
                 debug "data: Now modify the storage of character data from 'Normal' to 'Special'{fast}{......}{w=1.0}{nw}"
-                $ persistent.duplicate_name_fixed = True
+                $ persistent.variables["duplicate_name_fixed"] = True
                 debug "data: Success.{fast}{w=0.5}{nw}"
                 debug "Press any key to continue...{fast}"
                 setup "{......}等等。"
