@@ -1,6 +1,15 @@
 # 向导 by 祐荽
 
 
+init -999 python:
+    names = [
+        "祐荽", "Yangsy56302", "小绿君", "飞雨凌云", "莫邪Morin", "ms_win_and_mc", 
+        "是动听D温呐", "晴柚-Grafrustix", "TheHale", "终究是摆了", "阿希尔Ashell", 
+        "myworldzycpc", "李星眠", "晴安柚子", "凌云", "莫邪", "李婉清", "杨曦", "小绿草", 
+        "MaoYuNa133", "怃", "Pumi", "UNI", "Happylamb029", 
+    ]
+
+
 init -99 python:
     import os
     import math
@@ -305,12 +314,14 @@ label setup_naming_entered:
             $ persistent.setup_saw_debug_screen = True
         else:
             mwam.comment "你们来填吧，我想不出这里写什么"
+            yangsy.comment "总感觉这里留空就行了（"
         jump setup_naming_loop
+
 
     # 否则，如果输入的名字与剧情中存在的角色撞名：
     elif player_input in names:
         # 并且，如果还没修改角色：
-        if not persistent.duplicate_name_fixed:
+        if not persistent.variables["duplicate_name_fixed"]:
             # 并且，如果游戏目前不在调试模式：
             if not persistent.debug_mode:
                 # 显示错误提示
@@ -333,7 +344,7 @@ label setup_naming_entered:
                 python: 
                     quick_menu = True
                     renpy.block_rollback()
-                pause 1.0
+                pause 6.0
                 window auto
                 # 第一次：
                 if duplicate_name_attempts == 1:
@@ -383,7 +394,7 @@ label setup_naming_entered:
                 nvl clear
                 debug "info: changestorage.sh begin{fast}{w=1.0}{nw}"
                 debug "data: Now modify the storage of character data from 'Normal' to 'Special'{fast}{......}{w=1.0}{nw}"
-                $ persistent.duplicate_name_fixed = True
+                $ persistent.variables["duplicate_name_fixed"] = True
                 debug "data: Success.{fast}{w=0.5}{nw}"
                 debug "Press any key to continue...{fast}"
                 "等等。"
@@ -460,7 +471,6 @@ label setup_naming_entered:
     else:
         $ mc.nickname = player_input
         jump setup_naming_confirm
-
 
 
 label setup_naming_confirm:

@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("ACLCC Galgame")
+define config.name = _("ACLCCGame")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -71,7 +71,7 @@ ADOFAI Cursed Levels (CN) Community
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "ACLCCGalgame"
+define build.name = "ACLCCGame"
 
 
 ## Build Config
@@ -134,6 +134,12 @@ define config.after_load_transition = fade
 define config.end_game_transition = fade
 
 
+## Between ADV mode and NVL mode.
+
+define config.adv_nvl_transition = dissolve
+define config.nvl_adv_transition = dissolve
+
+
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
 
@@ -186,7 +192,7 @@ default preferences.audio_when_unfocused = False
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "ACLCCGalgame-1778943679"
+define config.save_directory = "ACLCCGame"
 
 
 ## Icon ########################################################################

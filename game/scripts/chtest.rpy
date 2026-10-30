@@ -1,5 +1,5 @@
 label chtest:
-    jump chtest_exceptscreen
+    jump chyangsy_1
 
 
 label chtest_char:
@@ -40,10 +40,12 @@ label chtest_exceptscreen:
 
     return
 
+
 label chtest_session_title:
     nvl clear
     $ session_title = gra
     gra.nvl "这是什么颜色？"
+
 
 label chtest_select_file:
     nvl clear
